@@ -1,0 +1,21 @@
+<App>
+	<ClientPanel Background="#cfcfcf">
+		<myToast ux:Global="myToast"/>
+
+		<Button Clicked="{sendToast}" Text="Click Me" Background="#fff" Alignment="Center" Padding="30,20"/>
+	</ClientPanel>
+
+	<JavaScript>
+		var myToast = require("myToast");
+
+		function sendToast(msg){
+			var msg = "Android Toast is Working";
+			myToast.toastIt(msg)
+		}
+
+		module.exports ={
+			sendToast
+		}
+	</JavaScript>
+</App>
+
