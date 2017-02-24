@@ -17,4 +17,5 @@ Android Toast View for fuse
 		sendToast
 	}
 3 - In your UX file:
+
 	Button Clicked="{sendToast}" Text="Click Me"/>
