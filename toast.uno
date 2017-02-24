@@ -9,9 +9,16 @@ using Uno.Compiler.ExportTargetInterop;
 [extern(Android) ForeignInclude(Language.Java, "android.app.Activity","android.widget.Toast")]
 
 [UXGlobalModule]
-public class myToast : NativeModule
+public class deviceToast : NativeModule
 {
-    public myToast(){
+    static readonly deviceToast _instance;
+
+    public deviceToast(){
+        if(_instance !=null) return;
+        _instance = this;
+
+        Resource.SetGlobalKey(_instance, "deviceToast");
+
         AddMember(new NativeFunction("toastIt", (NativeCallback)ToastIt));
     }
 
