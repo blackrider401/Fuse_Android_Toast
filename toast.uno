@@ -17,9 +17,9 @@ public class deviceToast : NativeModule
         if(_instance !=null) return;
         _instance = this;
 
-        Resource.SetGlobalKey(_instance, "deviceToast");
+        Uno.UX.Resource.SetGlobalKey(_instance, "deviceToast");
 
-        AddMember(new NativeFunction("toastIt", (NativeCallback)ToastIt));
+        AddMember(new NativeFunction("ToastIt", (NativeCallback)ToastIt));
     }
 
     static object ToastIt(Fuse.Scripting.Context c, object[] args)
