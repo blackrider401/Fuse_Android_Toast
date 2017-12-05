@@ -10,7 +10,7 @@ Android Toast View for fuse
 
 	function sendToast(msg){
 		var msg = "Android Toast is Working";
-		deviceToast.toastIt(msg)
+		deviceToast.ToastIt(msg)
 	}
 
 	module.exports ={
