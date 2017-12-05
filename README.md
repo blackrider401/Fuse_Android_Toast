@@ -9,7 +9,7 @@ Android Toast View for fuse
 	var deviceToast = require("deviceToast");
 
 	function sendToast(msg){
-		var msg = "Android Toast is Working";
+		//var msg = "Android Toast is Working";
 		deviceToast.ToastIt(msg)
 	}
 
